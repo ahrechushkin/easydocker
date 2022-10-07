@@ -2,12 +2,9 @@
 
 require "test_helper"
 
-class TestEasydocker < Minitest::Test
+class TestEasyDocker < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Easydocker::VERSION
+    refute_nil ::EasyDocker::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
-  end
 end
