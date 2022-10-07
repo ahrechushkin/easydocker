@@ -18,6 +18,11 @@ module EasyDocker
     Object.const_get(@@provider.capitalize).new.containers
   end
 
+  def self.container(id = nil)
+    raise ArgumentError, "Container ID is required" if id.nil?
+    Object.const_get(@@provider.capitalize).new.container(id)
+  end
+
   def self.images
     Object.const_get(@@provider.capitalize).new.images
   end

@@ -6,6 +6,10 @@ class ProviderBase
     JSON.parse`#{base_cmd} ps -a --format json`
   end
 
+  def container(id)
+    JSON.parse`#{base_cmd} inspect #{id}`
+  end
+
   def images
     JSON.parse`#{base_cmd} images --format json`
   end

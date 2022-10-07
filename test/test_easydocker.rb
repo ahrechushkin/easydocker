@@ -7,4 +7,12 @@ class TestEasyDocker < Minitest::Test
     refute_nil ::EasyDocker::VERSION
   end
 
+  def test_default_provider_name
+    assert_equal 'docker', EasyDocker.provider
+  end
+
+  def test_containers
+    refute_empty EasyDocker.containers
+  end
+
 end
